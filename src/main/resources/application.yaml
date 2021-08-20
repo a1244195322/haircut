@@ -1,0 +1,20 @@
+#thymelea模板配置
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    #热部署文件，页面不产生缓存，及时更新
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/haircut?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: tiger
+
+mybatis:
+  type-aliases-package: com.newmall.pojo # 所有POJO类所在包路径
+  mapper-locations: classpath:mapper/*.xml # mapper映射文件
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
